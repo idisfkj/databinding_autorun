@@ -1,0 +1,46 @@
+<idea-plugin>
+    <id>com.idisfkj.databinding.autorun</id>
+    <name>DataBinding Autorun</name>
+    <vendor email="idisfkj@gmail.com" url="https://www.rousetime.com">Rouse</vendor>
+
+    <description><![CDATA[
+    DataBinding Autorun.<br>
+    <em>创建DataBinding特定xml文件，避免创建传统xml文件后再去转换成DataBinding模式</em>
+    <em>本插件意在日常的快速开发。</em>
+    ]]></description>
+
+    <!--please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html-->
+    <!--on how to target different products -->
+    <!--uncomment to enable plugin in all products-->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <defaultProjectTypeProvider type="Android"/>
+        <projectConfigurable instance="com.idisfkj.databinding.autorun.ui.settings.SettingsConfigurable"/>
+        <projectService serviceInterface="com.idisfkj.databinding.autorun.component.SettingsComponent"
+                        serviceImplementation="com.idisfkj.databinding.autorun.component.SettingsComponent"/>
+    </extensions>
+
+    <project-components>
+        <component>
+            <implementation-class>
+                com.idisfkj.databinding.autorun.component.SettingsComponent
+            </implementation-class>
+        </component>
+    </project-components>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="com.idisfkj.databinding.autorun.actions.DataBindingAutorunAction"
+                id="DataBindingAutorunAction"
+                text="_DataBinding layout resource file"
+                description="Create DataBinding Resource File">
+            <add-to-group group-id="NewGroup" anchor="first"/>
+            <!--<add-to-group group-id="EditorPopupMenu" anchor="last"/>-->
+            <!--<add-to-group group-id="GenerateGroup" anchor="last"/>-->
+        </action>
+    </actions>
+
+</idea-plugin>

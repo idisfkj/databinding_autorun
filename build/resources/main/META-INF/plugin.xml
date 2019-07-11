@@ -1,0 +1,34 @@
+<idea-plugin>
+  <version>1.0.1</version>
+  <change-notes>
+      Add change notes here.&lt;br&gt;
+      &lt;em&gt;most HTML tags may be used&lt;/em&gt;</change-notes>
+  <idea-version since-build="183.6156" until-build="183.*"/>
+  <id>com.idisfkj.databinding.autorun</id>
+  <name>DataBinding Autorun</name>
+  <vendor email="idisfkj@gmail.com" url="https://www.rousetime.com">Rouse</vendor>
+  <description>
+    DataBinding Autorun.&lt;br&gt;
+    &lt;em&gt;创建DataBinding特定xml文件，避免创建传统xml文件后再去转换成DataBinding模式&lt;/em&gt;
+    &lt;em&gt;本插件意在日常的快速开发。&lt;/em&gt;
+    </description>
+  <depends>com.intellij.modules.lang</depends>
+  <depends>org.jetbrains.kotlin</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <defaultProjectTypeProvider type="Android"/>
+    <projectConfigurable instance="com.idisfkj.databinding.autorun.ui.settings.SettingsConfigurable"/>
+    <projectService serviceInterface="com.idisfkj.databinding.autorun.component.SettingsComponent" serviceImplementation="com.idisfkj.databinding.autorun.component.SettingsComponent"/>
+  </extensions>
+  <project-components>
+    <component>
+      <implementation-class>
+                com.idisfkj.databinding.autorun.component.SettingsComponent
+            </implementation-class>
+    </component>
+  </project-components>
+  <actions>
+    <action class="com.idisfkj.databinding.autorun.actions.DataBindingAutorunAction" id="DataBindingAutorunAction" text="_DataBinding layout resource file" description="Create DataBinding Resource File">
+      <add-to-group group-id="NewGroup" anchor="first"/>
+    </action>
+  </actions>
+</idea-plugin>
