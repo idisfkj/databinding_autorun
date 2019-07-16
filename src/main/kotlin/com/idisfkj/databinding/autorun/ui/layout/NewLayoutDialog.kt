@@ -51,13 +51,19 @@ class NewLayoutDialog(
                 TemplateUtils.getTemplateContent(panel.rootElement.text)
             )
 
+        // 通过Swing dispatch thread来进行写操作
         ApplicationManager.getApplication().runWriteAction {
+            // module的扩展方法，目的是通过PsiManager定位到layout目录下
             getModule()?.handleVirtualFile {
+                // 判断该操作是否在可接受的范围内
                 if (actionVirtualFile.path.contains(it.virtualFile.path)) {
                     try {
+                        // 添加文件
                         it.add(file)
+                        // 关闭弹窗
                         close(OK_EXIT_CODE)
                     } catch (e: IncorrectOperationException) {
+                        // 异常弹窗提醒
                         NotificationUtils.showMessage(
                             project, "error",
                             e.localizedMessage
