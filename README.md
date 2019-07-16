@@ -27,3 +27,7 @@
 
 ## Issues
 如果在使用的过程中有任何问题或者不便的地方，欢迎@我，或者直接提交Issue，我会第一时间进行改善~
+
+如果想更多的了解我，可以扫描下方二维码关注我的公众号，欢迎你的加入！
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/rmIMUv3sRicAic7yrMHyaQJ4e4GNC5PGaniajTJ2ia7kibj5JMkCDEt1aJBcyk1z9Sxj0xU5jKNdI1VKLGJsUr7yhibg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
