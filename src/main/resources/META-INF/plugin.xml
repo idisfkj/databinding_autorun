@@ -2,6 +2,11 @@
     <id>com.idisfkj.databinding.autorun</id>
     <name>DataBinding Autorun</name>
     <vendor email="idisfkj@gmail.com" url="https://www.rousetime.com">Rouse</vendor>
+    <change-notes>
+        1. add change notes
+        2. update databinding autorun
+    </change-notes>
+    <version>1.0.3</version>
 
     <description><![CDATA[
     DataBinding Autorun.<br>
