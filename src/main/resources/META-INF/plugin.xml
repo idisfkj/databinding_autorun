@@ -5,8 +5,8 @@
 
     <description><![CDATA[
     DataBinding Autorun.<br>
-    <em>创建DataBinding特定xml文件，避免创建传统xml文件后再去转换成DataBinding模式</em>
-    <em>本插件意在日常的快速开发。</em>
+    <em>Create DataBinding specific XML files, avoid creating XML files and then to convert traditional DataBinding mode</em>
+    <em>The purpose of this plugin is to provide daily development efficiency.</em>
     ]]></description>
 
     <!--please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html-->
