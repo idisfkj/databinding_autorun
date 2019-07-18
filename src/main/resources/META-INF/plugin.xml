@@ -3,10 +3,10 @@
     <name>DataBinding Autorun</name>
     <vendor email="idisfkj@gmail.com" url="https://www.rousetime.com">Rouse</vendor>
     <change-notes>
-        1. add change notes
-        2. update databinding autorun
+        1. add error dialog
+        2. update databinding autorun ui
     </change-notes>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
 
     <description><![CDATA[
     DataBinding Autorun.<br>
